@@ -296,6 +296,11 @@ for a in $modules $dynmodules; do
     opendbx)
       PDNS_CHECK_OPENDBX
       ;;
+    remote)
+      AS_IF([test "x$enable_unit_tests" = "xyes"],
+        [PDNS_CHECK_CURL_PROGRAM]
+      )
+      ;;
     tinydns)
       PDNS_CHECK_CDB
       ;;
