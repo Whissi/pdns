@@ -20,7 +20,7 @@ libremotebackend_la_LDFLAGS=-module -avoid-version
 libremotebackend_la_LIBADD=$(LIBZMQ_LIBS) ../../pdns/ext/yahttp/yahttp/libyahttp.la
 
 if UNIT_TESTS
-AM_TESTS_ENVIRONMENT = \
+TESTS_ENVIRONMENT = \
 	BOOST_TEST_LOG_LEVEL=message; \
 	export BOOST_TEST_LOG_LEVEL; \
 	REMOTEBACKEND_ZEROMQ=$(REMOTEBACKEND_ZEROMQ); \
